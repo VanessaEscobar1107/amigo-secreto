@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sistema de amigo secreto </title>
+    <title>Juego de amigo secreto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Juego de amigo secreto</h1>
+    <div>
+        <input type="text" id="nombre" placeholder="Ingresa el nombre de tu amigo secreto">
+        <button onclick="agregarNombre()">Añadir</button>
+        <button onclick="sortearAmigo()">Sortear Amigos</button>
+    </div>
+    <div id="listaNombres"></div>
+    <div id="resultado"></div>
+    <script src="app.js"></script>
 </body>
 </html>
