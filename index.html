@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Juego de amigo secreto</h1>
-    <div>
-        <input type="text" id="nombre" placeholder="Ingresa el nombre de tu amigo secreto">
-        <button onclick="agregarNombre()">Añadir</button>
+    <div class="container">
+        <h1>Juego de amigo secreto</h1>
+        <div class="input-container">
+            <input type="text" id="nombre" placeholder="Ingresa el nombre de tu amigo secreto">
+            <button onclick="agregarNombre()">Añadir</button>
+        </div>
         <button onclick="sortearAmigo()">Sortear Amigos</button>
+        <div id="listaNombres"></div>
+        <div id="resultado"></div>
     </div>
-    <div id="listaNombres"></div>
-    <div id="resultado"></div>
     <script src="app.js"></script>
 </body>
 </html>

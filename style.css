@@ -1,100 +1,91 @@
-/* Fondo con imagen y estilo general */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('https://www.transparenttextures.com/patterns/just-gray.png'); /* Fondo sutil */
-    background-size: cover;
+* {
     margin: 0;
-    padding: 20px;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://www.example.com/imagen-nina.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
 }
 
 h1 {
-    color: #ffffff;
-    text-align: center;
-    font-size: 3em;
+    font-size: 36px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Contenedor principal */
-div {
-    text-align: center;
-    margin-top: 30px;
+.input-container {
+    margin-bottom: 20px;
 }
 
-/* Estilos de entrada y botones */
 input[type="text"] {
-    padding: 15px;
-    width: 300px;
-    margin-right: 10px;
+    padding: 12px;
+    width: 80%;
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
+    margin-right: 10px;
     font-size: 16px;
-    outline: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 input[type="text"]:focus {
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Efecto al hacer foco */
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 button {
     padding: 12px 20px;
+    border: none;
     background-color: #007bff;
     color: #fff;
-    border: none;
     border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #0056b3;
-    transform: translateY(-2px); /* Efecto de elevarse al pasar el cursor */
 }
 
-button:active {
-    transform: translateY(2px); /* Efecto al hacer clic */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
 }
 
-/* Lista de nombres como tarjetas */
 #listaNombres {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-}
-
-#listaNombres li {
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 10px;
-    padding: 15px 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
     font-size: 18px;
-    list-style-type: none;
-    transition: transform 0.3s ease;
-}
-
-#listaNombres li:hover {
-    transform: scale(1.05); /* Efecto de aumentar el tamaño al pasar el cursor */
-}
-
-/* Estilo para el resultado */
-#resultado {
-    margin-top: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #28a745;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-weight: 300;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(40, 167, 69, 0.1);
-    max-width: 300px;
-    margin: 20px auto;
-    text-align: center;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffeb3b;
+    background-color: rgba(0, 123, 255, 0.8);
+    padding: 15px;
+    border-radius: 25px;
 }
