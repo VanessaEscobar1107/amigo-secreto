@@ -1,62 +1,100 @@
+/* Fondo con imagen y estilo general */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://www.transparenttextures.com/patterns/just-gray.png'); /* Fondo sutil */
+    background-size: cover;
     margin: 0;
     padding: 20px;
+    color: #333;
 }
 
 h1 {
-    color: #333;
+    color: #ffffff;
     text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
 }
 
+/* Contenedor principal */
 div {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
+/* Estilos de entrada y botones */
 input[type="text"] {
-    padding: 10px;
+    padding: 15px;
     width: 300px;
     margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    border-radius: 10px;
     font-size: 16px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Efecto al hacer foco */
 }
 
 button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px); /* Efecto de elevarse al pasar el cursor */
 }
 
+button:active {
+    transform: translateY(2px); /* Efecto al hacer clic */
+}
+
+/* Lista de nombres como tarjetas */
 #listaNombres {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #555;
-    list-style-type: none; /* Eliminar los puntos de lista */
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
 }
 
 #listaNombres li {
-    background-color: #e9ecef;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    list-style-type: none;
+    transition: transform 0.3s ease;
 }
 
+#listaNombres li:hover {
+    transform: scale(1.05); /* Efecto de aumentar el tamaño al pasar el cursor */
+}
+
+/* Estilo para el resultado */
 #resultado {
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 30px;
+    font-size: 24px;
     font-weight: bold;
-    color: #007bff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+    color: #28a745;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(40, 167, 69, 0.1);
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
 }
